@@ -1,9 +1,9 @@
 # rest-api-response-format
 
-Rest API Success Responses
+## Rest API Success Responses
 
-1- GET single resource - HTTP Response Code: 200
-
+1- GET single resource - HTTP Response Code: *200*
+```javascript
     {
         "data": {
             "field1": "value1",
@@ -11,9 +11,9 @@ Rest API Success Responses
         },
         "message": null /* skip or optional success message */
     }
-
-2- GET resource list - HTTP Response Code: 200
-
+```
+2- GET resource list - HTTP Response Code: *200*
+```javascript
     {
         "_meta": {
             "count": 100,
@@ -38,21 +38,22 @@ Rest API Success Responses
         ],
         "message": null /* skip or optional success message */
     }
-
-3- POST - HTTP Response Code: 201
-
+```
+3- POST - HTTP Response Code: *201*
+```javascript
     {
         "message": "resource {{id}} was created"
     }
-    
-4- PUT - HTTP Response Code: 201
-
+```
+4- PUT - HTTP Response Code: *201*
+```javascript
     {
         "message": "resource {{id}} was updated"
     }
-    
-5- DELETE - HTTP Response Code: 204
-
+```
+5- DELETE - HTTP Response Code: *204*
+```javascript
     {
         "message": "resource {{id}} was deleted"
     }
+```
