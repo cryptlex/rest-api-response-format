@@ -42,17 +42,17 @@ Rest API Success Responses
 3- POST - HTTP Response Code: 201
 
     {
-        "message": "resource {{id}} was created/updated/deleted"
+        "message": "resource {{id}} was created"
     }
     
 4- PUT - HTTP Response Code: 201
 
     {
-        "message": "resource {{id}} was created/updated/deleted"
+        "message": "resource {{id}} was updated"
     }
     
 5- DELETE - HTTP Response Code: 204
 
     {
-        "message": "resource {{id}} was created/updated/deleted"
+        "message": "resource {{id}} was deleted"
     }
