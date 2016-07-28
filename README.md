@@ -77,6 +77,7 @@
 3- POST -  HTTP Response Code: **400**
 ```javascript
     {
+        "message": null, /* skip or optional error message */
         "errors": [
             {
                 "message": "Sorry, the field value is invalid",
@@ -88,16 +89,20 @@
                 "code": 35,
                 "field": "phoneNumber"
             }
-        ],
-        "message": null /* skip or optional error message */
+        ]
     }
 ```
 4- PUT -  HTTP Response Code: **400/404**
 ```javascript
     {
+        "message": "Sorry, the resource does not exist (404)"
+    }
+    or
+    {
+        "message": null, /* skip or optional error message for 400 */
         "errors": [
             {
-                "message": "Sorry, the resource does not exist",
+                "message": "Sorry, the field value is invalid",
                 "code": 34,
                 "field": "email"
             },
@@ -106,8 +111,7 @@
                 "code": 35,
                 "field": "phoneNumber"
             }
-        ],
-        "message": null /* skip or optional error message */
+        ]
     }
 ```
 5- VERB Unauthorized - HTTP Response Code: **401**
