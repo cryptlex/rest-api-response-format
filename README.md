@@ -2,7 +2,7 @@
 
 ## Rest API Success Responses
 
-1- GET single resource - HTTP Response Code: *200*
+1- GET single resource - HTTP Response Code: **200**
 ```javascript
     {
         "data": {
@@ -12,7 +12,7 @@
         "message": null /* skip or optional success message */
     }
 ```
-2- GET resource list - HTTP Response Code: *200*
+2- GET resource list - HTTP Response Code: **200**
 ```javascript
     {
         "_meta": {
@@ -39,21 +39,86 @@
         "message": null /* skip or optional success message */
     }
 ```
-3- POST - HTTP Response Code: *201*
+3- DELETE - HTTP Response Code: **204**
 ```javascript
     {
-        "message": "resource {{id}} was created"
+        "message": "resource with id 1234 was deleted"
     }
 ```
-4- PUT - HTTP Response Code: *201*
+4- POST - HTTP Response Code: **201**
 ```javascript
     {
-        "message": "resource {{id}} was updated"
+        "message": "resource with id 1234 was created"
     }
 ```
-5- DELETE - HTTP Response Code: *204*
+5- PUT - HTTP Response Code: **201**
 ```javascript
     {
-        "message": "resource {{id}} was deleted"
+        "message": "resource with id 1234 was updated"
+    }
+```
+
+
+## Rest API Error Responses
+
+1- GET resource - HTTP Response Code: **400/404**
+
+```javascript
+    {
+        "message": "Sorry, the resource does not exist (404) or malformed query (400)"
+    }
+```
+2- DELETE resource - HTTP Response Code: **404**
+```javascript
+    {
+        "message": "Sorry, the resource does not exist"
+    }
+```
+3- POST -  HTTP Response Code: **400**
+```javascript
+    {
+        "errors": [
+            {
+                "message": "Sorry, the field value is invalid",
+                "code": 34,
+                "field": "email"
+            },
+            {
+                "message": "Some other error",
+                "code": 35,
+                "field": "phoneNumber"
+            }
+        ],
+        "message": null /* skip or optional error message */
+    }
+```
+4- PUT -  HTTP Response Code: **400/404**
+```javascript
+    {
+        "errors": [
+            {
+                "message": "Sorry, the resource does not exist",
+                "code": 34,
+                "field": "email"
+            },
+            {
+                "message": "Sorry, the field value is invalid",
+                "code": 35,
+                "field": "phoneNumber"
+            }
+        ],
+        "message": null /* skip or optional error message */
+    }
+```
+5- VERB Unauthorized - HTTP Response Code: **401**
+```javascript
+    {
+        "message": "you are not authorized to access the resource"
+    }
+```
+3- VERB Forbidden - HTTP Response Code: **403**
+```javascript
+    {
+        "message": "you are not allowed to access the resource"
     }
 ```
