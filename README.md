@@ -120,7 +120,7 @@
         "message": "you are not authorized to access the resource"
     }
 ```
-3- VERB Forbidden - HTTP Response Code: **403**
+6- VERB Forbidden - HTTP Response Code: **403**
 ```javascript
     {
         "message": "you are not allowed to access the resource"
