@@ -126,3 +126,9 @@
         "message": "you are not allowed to access the resource"
     }
 ```
+7- VERB Server Error - HTTP Response Code: **5XX**
+```javascript
+    {
+        "message": "server error message"
+    }
+```
