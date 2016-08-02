@@ -163,7 +163,7 @@ https://github.com/adnan-kamili/swagger-sample-template
       "message": "Something is broken"
     }
 ```
-9- VERB Internal Server Error - HTTP Response Code: **503**
+9- VERB Service Unavailable - HTTP Response Code: **503**
 ```javascript
     HTTP/1.1  503
     Content-Type: application/json
