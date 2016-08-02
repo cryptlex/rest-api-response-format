@@ -9,54 +9,55 @@ https://github.com/adnan-kamili/swagger-sample-template
 
 1- GET single resource - HTTP Response Code: **200**
 ```javascript
+    HTTP/1.1 200
+    Content-Type: application/json
+
     {
-        "data": {
-            "field1": "value1",
-            "field2": "value2"
-        }
+        "id": 10,
+        "name": "shirt",
+        "color": "red",
+        "price": "$23"
     }
 ```
 2- GET resource list - HTTP Response Code: **200**
 ```javascript
-    {
-        "_meta": {
-            "count": 100,
-            "page": 5,
-            "limit": 20,
-            "links": [
-                { "self": "/products?page=5&limit=20" },
-                { "first": "/products?page=0&limit=20" },
-                { "previous": "/products?page=4&limit=20" },
-                { "next": "/products?page=6&limit=20" },
-                { "last": "/products?page=26&limit=20" },
-            ]
-        },
-        "data": [
-            {
-                "field1": "value1",
-                "field2": "value2"
-            }, {
-                "field1": "value1",
-                "field2": "value2"
-            }
-        ]
-    }
+    HTTP/1.1 200
+    X-Pagination-Count: 100
+    X-Pagination-Page: 5
+    X-Pagination-Limit: 20
+    Content-Type: application/json
+    
+    [
+      {
+        "id": 10,
+        "name": "shirt",
+        "color": "red",
+        "price": "$23"
+      }
+    ]
 ```
-3- DELETE - HTTP Response Code: **204**
+
+3- POST - HTTP Response Code: **201**
 ```javascript
-    It does not return any content
+    HTTP/1.1  201
+    Content-Type: application/json
+ 
+    {
+      "message": "The item was created successfully"
+    }
 ```
 4- PATCH - HTTP Response Code: **201**
 ```javascript
+    HTTP/1.1  201
+    Content-Type: application/json
+ 
     {
-        "message": "resource with id 1234 was created"
+      "message": "The item was updated successfully"
     }
 ```
-5- PUT - HTTP Response Code: **201**
+5- DELETE - HTTP Response Code: **204**
 ```javascript
-    {
-        "message": "resource with id 1234 was updated"
-    }
+    HTTP/1.1  204
 ```
 
 
