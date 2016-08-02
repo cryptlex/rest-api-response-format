@@ -63,23 +63,32 @@ https://github.com/adnan-kamili/swagger-sample-template
 
 ## Rest API Error Responses
 
-1- GET resource - HTTP Response Code: **400/404**
+1- GET resource - HTTP Response Code: **404**
 
 ```javascript
+    HTTP/1.1  404
+    Content-Type: application/json
+ 
     {
-        "message": "Sorry, the resource does not exist (404) or malformed query (400)"
+      "message": "The item does not exist"
     }
 ```
 2- DELETE resource - HTTP Response Code: **404**
 ```javascript
+    HTTP/1.1  404
+    Content-Type: application/json
+ 
     {
-        "message": "Sorry, the resource does not exist"
+      "message": "The item does not exist"
     }
 ```
 3- POST -  HTTP Response Code: **400**
 ```javascript
+    HTTP/1.1  400
+    Content-Type: application/json
+    
     {
-        "message": null, /* skip or optional error message */
+        "message": "Validation errors in your request", /* skip or optional error message */
         "errors": [
             {
                 "message": "Sorry, the field value is invalid",
@@ -87,7 +96,7 @@ https://github.com/adnan-kamili/swagger-sample-template
                 "field": "email"
             },
             {
-                "message": "Some other error",
+                "message": "Some the format is not correct",
                 "code": 35,
                 "field": "phoneNumber"
             }
@@ -96,41 +105,70 @@ https://github.com/adnan-kamili/swagger-sample-template
 ```
 4- PATCH -  HTTP Response Code: **400/404**
 ```javascript
+    HTTP/1.1  400
+    Content-Type: application/json
+    
     {
-        "message": "Sorry, the resource does not exist (404)"
-    }
-    or
-    {
-        "message": null, /* skip or optional error message for 400 */
+        "message": "Validation errors in your request", /* skip or optional error message */
         "errors": [
             {
-                "message": "Sorry, the field value is invalid",
-                "code": 34,
-                "field": "email"
-            },
-            {
-                "message": "Sorry, the field value is invalid",
+                "message": "Some the format is not correct",
                 "code": 35,
                 "field": "phoneNumber"
             }
         ]
     }
+    
+    
+    HTTP/1.1  404
+    Content-Type: application/json
+ 
+    {
+      "message": "The item does not exist"
+    }
 ```
 5- VERB Unauthorized - HTTP Response Code: **401**
 ```javascript
+    HTTP/1.1  401
+    Content-Type: application/json
+ 
     {
-        "message": "you are not authorized to access the resource"
+      "message": "Authentication credentials were missing or incorrect"
     }
 ```
 6- VERB Forbidden - HTTP Response Code: **403**
 ```javascript
+    HTTP/1.1  403
+    Content-Type: application/json
+ 
     {
-        "message": "you are not allowed to access the resource"
+      "message": "The request cannot be served due to the application’s rate limit having been exhausted for the resource"
     }
 ```
-7- VERB Server Error - HTTP Response Code: **5XX**
+7- VERB Too Many Requests - HTTP Response Code: **429**
 ```javascript
+    HTTP/1.1  429
+    Content-Type: application/json
+ 
     {
-        "message": "server error message"
+      "message": "The request cannot be served due to the application’s rate limit having been exhausted for the resource"
+    }
+```
+8- VERB Internal Server Error - HTTP Response Code: **500**
+```javascript
+    HTTP/1.1  500
+    Content-Type: application/json
+ 
+    {
+      "message": "Something is broken"
+    }
+```
+9- VERB Internal Server Error - HTTP Response Code: **503**
+```javascript
+    HTTP/1.1  503
+    Content-Type: application/json
+ 
+    {
+      "message": "The server is up, but overloaded with requests. Try again later!"
     }
 ```
