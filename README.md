@@ -46,7 +46,7 @@ https://github.com/adnan-kamili/swagger-sample-template
 ```javascript
     It does not return any content
 ```
-4- POST - HTTP Response Code: **201**
+4- PATCH - HTTP Response Code: **201**
 ```javascript
     {
         "message": "resource with id 1234 was created"
