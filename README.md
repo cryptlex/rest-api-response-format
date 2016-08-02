@@ -1,4 +1,5 @@
 # rest-api-response-format
+REST API esponse format inspired by Google, Twitter, Amazon and some posts on internet:
 
 ## Rest API Success Responses
 
@@ -8,8 +9,7 @@
         "data": {
             "field1": "value1",
             "field2": "value2"
-        },
-        "message": null /* skip or optional success message */
+        }
     }
 ```
 2- GET resource list - HTTP Response Code: **200**
@@ -35,8 +35,7 @@
                 "field1": "value1",
                 "field2": "value2"
             }
-        ],
-        "message": null /* skip or optional success message */
+        ]
     }
 ```
 3- DELETE - HTTP Response Code: **204**
@@ -92,7 +91,7 @@
         ]
     }
 ```
-4- PUT -  HTTP Response Code: **400/404**
+4- PATCH -  HTTP Response Code: **400/404**
 ```javascript
     {
         "message": "Sorry, the resource does not exist (404)"
