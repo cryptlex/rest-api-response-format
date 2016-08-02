@@ -142,7 +142,7 @@ https://github.com/adnan-kamili/swagger-sample-template
     Content-Type: application/json
  
     {
-      "message": "The request cannot be served due to the application’s rate limit having been exhausted for the resource"
+      "message": "The request is understood, but it has been refused or access is not allowed"
     }
 ```
 7- VERB Too Many Requests - HTTP Response Code: **429**
@@ -151,7 +151,7 @@ https://github.com/adnan-kamili/swagger-sample-template
     Content-Type: application/json
  
     {
-      "message": "The request cannot be served due to the application’s rate limit having been exhausted for the resource"
+      "message": "The request cannot be served due to the rate limit having been exhausted for the resource"
     }
 ```
 8- VERB Internal Server Error - HTTP Response Code: **500**
