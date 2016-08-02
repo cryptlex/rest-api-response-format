@@ -1,5 +1,5 @@
 # rest-api-response-format
-REST API response format inspired by Google, Twitter, Amazon and some posts on internet:
+REST API response format inspired by Google, Twitter, Amazon and some posts on internet.
 
 The swagger file for following sample responses is available at:
 
