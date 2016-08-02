@@ -44,9 +44,7 @@ https://github.com/adnan-kamili/swagger-sample-template
 ```
 3- DELETE - HTTP Response Code: **204**
 ```javascript
-    {
-        "message": "resource with id 1234 was deleted"
-    }
+    It does not return any content
 ```
 4- POST - HTTP Response Code: **201**
 ```javascript
