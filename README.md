@@ -46,7 +46,9 @@ https://github.com/adnan-kamili/swagger-sample-template
       "message": "The item was created successfully"
     }
 ```
-4- PATCH - HTTP Response Code: **200/204** ((Request Content-Type: application/merge-patch+json))
+4- PATCH - HTTP Response Code: **200/204** 
+
+**Request Content-Type: application/merge-patch+json** - https://tools.ietf.org/html/rfc7396
 
 If updated entity is to be sent after the update
 ```javascript
