@@ -48,9 +48,10 @@ https://github.com/adnan-kamili/swagger-sample-template
 ```
 4- PATCH - HTTP Response Code: **200/204** 
 
-**Request Content-Type: application/merge-patch+json** - https://tools.ietf.org/html/rfc7396
+*Request Content-Type: application/merge-patch+json** - https://tools.ietf.org/html/rfc7396*
 
-If updated entity is to be sent after the update
+> If updated entity is to be sent after the update
+
 ```javascript
     HTTP/1.1  200
     Content-Type: application/json
@@ -62,10 +63,13 @@ If updated entity is to be sent after the update
         "price": "$23"
     }
 ```
-If updated entity is not to be sent after the update
+
+> If updated entity is not to be sent after the update
+
 ```javascript
     HTTP/1.1  204
 ```
+
 5- DELETE - HTTP Response Code: **204**
 ```javascript
     HTTP/1.1  204
