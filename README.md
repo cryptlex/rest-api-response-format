@@ -46,14 +46,23 @@ https://github.com/adnan-kamili/swagger-sample-template
       "message": "The item was created successfully"
     }
 ```
-4- PATCH - HTTP Response Code: **201**
+4- PATCH - HTTP Response Code: **200/204** ((Request Content-Type: application/merge-patch+json))
+
+If updated entity is to be sent after the update
 ```javascript
-    HTTP/1.1  201
+    HTTP/1.1  200
     Content-Type: application/json
  
     {
-      "message": "The item was updated successfully"
+        "id": 10,
+        "name": "shirt",
+        "color": "red",
+        "price": "$23"
     }
+```
+If updated entity is not to be sent after the update
+```javascript
+    HTTP/1.1  204
 ```
 5- DELETE - HTTP Response Code: **204**
 ```javascript
@@ -91,12 +100,12 @@ https://github.com/adnan-kamili/swagger-sample-template
         "message": "Validation errors in your request", /* skip or optional error message */
         "errors": [
             {
-                "message": "Sorry, the field value is invalid",
+                "message": "Oops! The value is invalid",
                 "code": 34,
                 "field": "email"
             },
             {
-                "message": "Some the format is not correct",
+                "message": "Oops! The format is not correct",
                 "code": 35,
                 "field": "phoneNumber"
             }
@@ -112,7 +121,7 @@ https://github.com/adnan-kamili/swagger-sample-template
         "message": "Validation errors in your request", /* skip or optional error message */
         "errors": [
             {
-                "message": "Some the format is not correct",
+                "message": "Oops! The format is not correct",
                 "code": 35,
                 "field": "phoneNumber"
             }
