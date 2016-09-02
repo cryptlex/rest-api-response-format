@@ -7,7 +7,7 @@ https://github.com/adnan-kamili/swagger-sample-template
 
 ## Rest API Success Responses
 
-1- GET single resource - HTTP Response Code: **200**
+1- GET - Get single item - HTTP Response Code: **200**
 ```javascript
     HTTP/1.1 200
     Content-Type: application/json
@@ -19,7 +19,7 @@ https://github.com/adnan-kamili/swagger-sample-template
         "price": "$23"
     }
 ```
-2- GET resource list - HTTP Response Code: **200**
+2- GET - Get item list - HTTP Response Code: **200**
 ```javascript
     HTTP/1.1 200
     X-Pagination-Count: 100
@@ -37,7 +37,7 @@ https://github.com/adnan-kamili/swagger-sample-template
     ]
 ```
 
-3- POST - HTTP Response Code: **201**
+3- POST - Create a new item - HTTP Response Code: **201**
 ```javascript
     HTTP/1.1  201
     Content-Type: application/json
@@ -46,7 +46,7 @@ https://github.com/adnan-kamili/swagger-sample-template
       "message": "The item was created successfully"
     }
 ```
-4- PATCH - HTTP Response Code: **200/204** 
+4- PATCH - Update an item - HTTP Response Code: **200/204** 
 
 *Request Content-Type: application/merge-patch+json - https://tools.ietf.org/html/rfc7396*
 
@@ -70,7 +70,7 @@ https://github.com/adnan-kamili/swagger-sample-template
     HTTP/1.1  204
 ```
 
-5- DELETE - HTTP Response Code: **204**
+5- DELETE - Delete an item - HTTP Response Code: **204**
 ```javascript
     HTTP/1.1  204
 ```
@@ -78,7 +78,7 @@ https://github.com/adnan-kamili/swagger-sample-template
 
 ## Rest API Error Responses
 
-1- GET resource - HTTP Response Code: **404**
+1- GET - HTTP Response Code: **404**
 
 ```javascript
     HTTP/1.1  404
@@ -88,7 +88,7 @@ https://github.com/adnan-kamili/swagger-sample-template
       "message": "The item does not exist"
     }
 ```
-2- DELETE resource - HTTP Response Code: **404**
+2- DELETE - HTTP Response Code: **404**
 ```javascript
     HTTP/1.1  404
     Content-Type: application/json
