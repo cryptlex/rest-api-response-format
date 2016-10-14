@@ -40,6 +40,7 @@ https://github.com/adnan-kamili/swagger-sample-template
 3- POST - Create a new item - HTTP Response Code: **201**
 ```javascript
     HTTP/1.1  201
+    Location: /items/12
     Content-Type: application/json
  
     {
