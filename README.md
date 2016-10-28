@@ -1,9 +1,13 @@
 # rest-api-response-format
-REST API response format using HTTP status codes
+REST API response format based on some of the best practices
 
 The **swagger.yaml** file for following sample responses is available at:
 
 https://github.com/adnan-kamili/swagger-sample-template
+
+## Rest API Sample Endpoint
+
+> https://api.example.com/v1/items
 
 ## Rest API Success Responses
 
@@ -32,7 +36,13 @@ https://github.com/adnan-kamili/swagger-sample-template
         "id": 10,
         "name": "shirt",
         "color": "red",
-        "price": "$23"
+        "price": "$123"
+      },
+      {
+        "id": 11,
+        "name": "coat",
+        "color": "black",
+        "price": "$2300"
       }
     ]
 ```
