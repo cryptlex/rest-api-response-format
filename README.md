@@ -171,7 +171,16 @@ https://github.com/adnan-kamili/swagger-sample-template
       "message": "The request is understood, but it has been refused or access is not allowed"
     }
 ```
-7- VERB Too Many Requests - HTTP Response Code: **429**
+7- VERB Conflict - HTTP Response Code: **409**
+```javascript
+    HTTP/1.1  409
+    Content-Type: application/json
+ 
+    {
+      "message": "Any message which should help the user to resolve the conflict"
+    }
+```
+8- VERB Too Many Requests - HTTP Response Code: **429**
 ```javascript
     HTTP/1.1  429
     Content-Type: application/json
@@ -180,7 +189,7 @@ https://github.com/adnan-kamili/swagger-sample-template
       "message": "The request cannot be served due to the rate limit having been exhausted for the resource"
     }
 ```
-8- VERB Internal Server Error - HTTP Response Code: **500**
+9- VERB Internal Server Error - HTTP Response Code: **500**
 ```javascript
     HTTP/1.1  500
     Content-Type: application/json
@@ -189,7 +198,7 @@ https://github.com/adnan-kamili/swagger-sample-template
       "message": "Something is broken"
     }
 ```
-9- VERB Service Unavailable - HTTP Response Code: **503**
+10- VERB Service Unavailable - HTTP Response Code: **503**
 ```javascript
     HTTP/1.1  503
     Content-Type: application/json
