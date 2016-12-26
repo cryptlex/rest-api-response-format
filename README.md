@@ -207,3 +207,45 @@ https://github.com/adnan-kamili/swagger-sample-template
       "message": "The server is up, but overloaded with requests. Try again later!"
     }
 ```
+## Validation Error Formats
+
+Validation error formats can be different depending on your requirements. So I am adding some other popular formats too other than the default one mentioned above.
+
+```javascript
+    HTTP/1.1  400
+    Content-Type: application/json
+    
+    {
+        "message": "Validation errors in your request", /* skip or optional error message */
+        "errors": {
+            "email": [
+                  "Oops! The email is invalid"
+                ],
+            "phoneNumber": [
+                  "Oops! The phone number format is not correct"
+                ]
+        }
+    }
+```
+```javascript
+    HTTP/1.1  400
+    Content-Type: application/json
+    
+    {
+        "message": "Validation errors in your request", /* skip or optional error message */
+        "errors": {
+            "email": [
+              {
+                "message": "Oops! The email is invalid",
+                "code": 35
+              }
+            ],
+            "phoneNumber": [
+              {
+                "message": "Oops! The phone number format is not correct",
+                "code": 36
+              }
+            ]
+        }
+    }
+```
