@@ -5,9 +5,11 @@ The **swagger.yaml** file for following sample responses is available at:
 
 https://github.com/adnan-kamili/swagger-sample-template
 
-## Rest API Sample Endpoint
+## Rest API Popular Endpoint Formats
 
 > https://api.example.com/v1/items
+
+> https://example.com/api/v1/items
 
 ## Rest API Success Responses
 
