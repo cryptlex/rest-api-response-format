@@ -209,7 +209,7 @@ https://github.com/adnan-kamili/swagger-sample-template
 ```
 ## Validation Error Formats
 
-Validation error formats can be different depending on your requirements. Following are some other popular formats, other than the one one used above.
+Validation error formats can be different depending on your requirements. Following are some other popular formats, other than the one used above.
 
 ```javascript
     HTTP/1.1  400
