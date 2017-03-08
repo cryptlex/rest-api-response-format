@@ -28,9 +28,9 @@ https://github.com/adnan-kamili/swagger-sample-template
 2- GET - Get item list - HTTP Response Code: **200**
 ```javascript
     HTTP/1.1 200
-    X-Pagination-Count: 100
-    X-Pagination-Page: 5
-    X-Pagination-Limit: 20
+    Pagination-Count: 100
+    Pagination-Page: 5
+    Pagination-Limit: 20
     Content-Type: application/json
     
     [
@@ -251,3 +251,7 @@ Validation error formats can be different depending on your requirements. Follow
         }
     }
 ```
+
+## References
+
+Avoid using 'X-' in custom headers: https://tools.ietf.org/html/rfc6648
