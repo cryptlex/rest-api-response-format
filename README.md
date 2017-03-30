@@ -251,7 +251,6 @@ Validation error formats can be different depending on your requirements. Follow
 ```
 
 ## References
-PATCH with partial json can be used for updating the resource
-*Request Content-Type: application/merge-patch+json - https://tools.ietf.org/html/rfc7396*
+PATCH with partial json can be used for updating the resource: https://tools.ietf.org/html/rfc7396
 
 Avoid using 'X-' in custom headers: https://tools.ietf.org/html/rfc6648
